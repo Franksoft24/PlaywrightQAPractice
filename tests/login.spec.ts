@@ -1,15 +1,15 @@
 import {test, expect} from '@playwright/test';
-import {LoginForm} from '../pages/loginForm';
+import {LoginFormPO} from '../pages/loginFormPO';
 import loginData from '../Data/loginData.json';
 
-let loginForm: LoginForm;
+let loginForm: LoginFormPO;
 let loginData_ = loginData;
 
 /// Login Tests to validate a successful login.
 test.describe('Login testing', () => {
   
   test.beforeEach(async ({page}) => {
-    loginForm = new LoginForm(page);
+    loginForm = new LoginFormPO(page);
     await loginForm.navigateToLogin();
   });
 
@@ -24,7 +24,7 @@ test.describe('Login testing', () => {
 test.describe('Login negative tests',() => {
 
   test.beforeEach(async ({page}) => {
-    loginForm = new LoginForm(page);
+    loginForm = new LoginFormPO(page);
     await loginForm.navigateToLogin();
   }); 
 
