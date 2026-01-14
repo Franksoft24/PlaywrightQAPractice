@@ -1,5 +1,6 @@
 import { Page, Locator, expect } from "@playwright/test";
 
+/// Page Object Model for the Login Form page.
 export class LoginFormPO {
   readonly page: Page;
   readonly usernameInput: Locator;
