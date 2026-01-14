@@ -2,12 +2,12 @@ import {test} from '@playwright/test';
 import { CheckOutPO } from '../pages/CheckoutPO';
 import loginData from '../Data/loginData.json';
 import checkoutData from '../Data/checkoutData.json';
-import { LoginFormPO } from '../pages/loginFormPO';
 import { InventoryPO } from '../pages/InventoryPO';
 import inventoryData from '../Data/inventoryData.json';
+import { LoginPO } from '../pages/LoginPO';
 
 let checkoutPage: CheckOutPO;
-let loginForm: LoginFormPO;
+let loginForm: LoginPO;
 let inventoryPage: InventoryPO;
 let loginData_ = loginData;
 let checkoutData_ = checkoutData;
@@ -18,7 +18,7 @@ test.describe('Full checkout page tests', () => {
 
     const fixedProduct = 4; // Using the 5th product for checkout tests
     test.beforeEach(async ({page}) => {
-        loginForm = new LoginFormPO(page);
+        loginForm = new LoginPO(page);
         inventoryPage = new InventoryPO(page);
         checkoutPage = new CheckOutPO(page);
         await loginForm.navigateToLogin(); // Navigate to login page
@@ -43,7 +43,7 @@ test.describe('Full checkout page tests', () => {
 test.describe('Checkout negative tests', () => {
 
     test.beforeEach(async ({page}) => {
-        loginForm = new LoginFormPO(page);
+        loginForm = new LoginPO(page);
         inventoryPage = new InventoryPO(page);
         checkoutPage = new CheckOutPO(page);
         await loginForm.navigateToLogin(); // Navigate to login page

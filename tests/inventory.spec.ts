@@ -2,10 +2,10 @@ import { test } from '@playwright/test';
 import { InventoryPO } from '../pages/InventoryPO';
 import loginData from '../Data/loginData.json';
 import inventoryData from '../Data/inventoryData.json';
-import { LoginFormPO } from '../pages/loginFormPO';
+import { LoginPO } from '../pages/LoginPO';
 
 let inventoryPage: InventoryPO;
-let loginForm: LoginFormPO;
+let loginForm: LoginPO;
 let loginData_ = loginData;
 let inventoryData_ = inventoryData;
 
@@ -13,7 +13,7 @@ let inventoryData_ = inventoryData;
 test.describe('Inventory page tests', () => {
   
   test.beforeEach(async ({page}) => {
-    loginForm = new LoginFormPO(page);
+    loginForm = new LoginPO(page);
     inventoryPage = new InventoryPO(page);
     await loginForm.navigateToLogin(); // Navigate to login page
     await loginForm.login(loginData_.userName, loginData_.password); // Login before each test

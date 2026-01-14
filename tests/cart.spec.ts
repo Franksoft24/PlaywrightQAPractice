@@ -1,13 +1,13 @@
 import { test, expect } from "@playwright/test";
 import { CartPO } from "../pages/CartPO";
 import { InventoryPO } from "../pages/InventoryPO";
-import { LoginFormPO } from "../pages/loginFormPO";
 import loginData from '../Data/loginData.json';
 import inventoryData from '../Data/inventoryData.json';
+import { LoginPO } from "../pages/LoginPO";
 
 let cartPage: CartPO;
 let inventoryPage: InventoryPO;
-let loginForm: LoginFormPO;
+let loginForm: LoginPO;
 let loginData_ = loginData;
 let inventoryData_ = inventoryData;
 
@@ -15,7 +15,7 @@ let inventoryData_ = inventoryData;
 test.describe('Cart page tests', () => {
   
   test.beforeEach(async ({page}) => {
-    loginForm = new LoginFormPO(page);
+    loginForm = new LoginPO(page);
     inventoryPage = new InventoryPO(page);
     cartPage = new CartPO(page);
     await loginForm.navigateToLogin(); // Navigate to login page
