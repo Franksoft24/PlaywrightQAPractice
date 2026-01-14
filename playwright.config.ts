@@ -28,6 +28,12 @@ export default defineConfig({
     /* Base URL to use in actions like `await page.goto('')`. */
     baseURL: 'https://www.saucedemo.com',
 
+    // Capture screenshot only when a test fails.
+    screenshot: 'only-on-failure', 
+
+    // Record video for each test, but remove videos from successful test runs.
+    video: 'retain-on-failure', 
+
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
   },
