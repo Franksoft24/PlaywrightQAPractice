@@ -1,5 +1,5 @@
 import {test, expect} from '@playwright/test';
-import {LoginFormPO} from '../pages/loginFormPO';
+import {LoginFormPO} from '../pages/LoginFormPO';
 import loginData from '../Data/loginData.json';
 
 let loginForm: LoginFormPO;
