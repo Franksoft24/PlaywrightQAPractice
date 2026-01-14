@@ -2,7 +2,7 @@ import {test} from '@playwright/test';
 import { CheckOutPO } from '../pages/CheckoutPO';
 import loginData from '../Data/loginData.json';
 import checkoutData from '../Data/checkoutData.json';
-import { LoginFormPO } from '../pages/LoginFormPO';
+import { LoginFormPO } from '../pages/loginFormPO';
 import { InventoryPO } from '../pages/InventoryPO';
 import inventoryData from '../Data/inventoryData.json';
 

@@ -2,7 +2,7 @@ import { test } from '@playwright/test';
 import { InventoryPO } from '../pages/InventoryPO';
 import loginData from '../Data/loginData.json';
 import inventoryData from '../Data/inventoryData.json';
-import { LoginFormPO } from '../pages/LoginFormPO';
+import { LoginFormPO } from '../pages/loginFormPO';
 
 let inventoryPage: InventoryPO;
 let loginForm: LoginFormPO;

@@ -1,7 +1,7 @@
 import { test, expect } from "@playwright/test";
 import { CartPO } from "../pages/CartPO";
 import { InventoryPO } from "../pages/InventoryPO";
-import { LoginFormPO } from "../pages/LoginFormPO";
+import { LoginFormPO } from "../pages/loginFormPO";
 import loginData from '../Data/loginData.json';
 import inventoryData from '../Data/inventoryData.json';
 
