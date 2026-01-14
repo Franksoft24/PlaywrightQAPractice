@@ -1,0 +1,13 @@
+{
+    "form" : {
+        "firstName": "Tester Name",
+        "lastName": "Testson LN",
+        "postalCode": "00000"
+    },
+    "errorMessages": {
+        "firstNameError": "Error: First Name is required",
+        "lastNameError": "Error: Last Name is required",
+        "postalCodeError": "Error: Postal Code is required"
+    },
+    "successMessage": "Thank you for your order!"
+}
