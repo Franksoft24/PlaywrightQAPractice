@@ -36,4 +36,8 @@ export class InventoryPO {
     await removeButton.click();
   }
 
+  async goToCart() {
+    await this.cart.click();
+  }
+
 }
