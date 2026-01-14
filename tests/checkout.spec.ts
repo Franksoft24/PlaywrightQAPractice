@@ -56,16 +56,19 @@ test.describe('Checkout negative tests', () => {
 
     test('Checkout with empty First Name', async ({page}) => {
         await checkoutPage.fillEmptyNameCheckoutForm(checkoutData_.form);
+        await checkoutPage.submitCheckout();
         await checkoutPage.validateErrorMessage(checkoutData_.errorMessages.firstNameError);
     });
 
     test('Checkout with empty Last Name', async ({page}) => {
         await checkoutPage.fillEmptyLastNameCheckoutForm(checkoutData_.form);
+        await checkoutPage.submitCheckout();
         await checkoutPage.validateErrorMessage(checkoutData_.errorMessages.lastNameError);
     });
 
     test('Checkout with empty Postal Code', async ({page}) => {
         await checkoutPage.fillEmptyPostalCodeCheckoutForm(checkoutData_.form);
+        await checkoutPage.submitCheckout();
         await checkoutPage.validateErrorMessage(checkoutData_.errorMessages.postalCodeError);
     });
 
